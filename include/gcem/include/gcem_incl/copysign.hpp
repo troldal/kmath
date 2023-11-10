@@ -21,6 +21,8 @@
 #ifndef _gcem_copysign_HPP
 #define _gcem_copysign_HPP
 
+#include "signbit.hpp"
+
 /**
  * Compile-time copy sign function
  *

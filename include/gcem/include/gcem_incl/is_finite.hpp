@@ -25,6 +25,9 @@
 #ifndef _gcem_is_finite_HPP
 #define _gcem_is_finite_HPP
 
+#include "is_nan.hpp"
+#include "is_inf.hpp"
+
 namespace internal {
 
 template <typename T> constexpr bool is_finite(const T x) noexcept {

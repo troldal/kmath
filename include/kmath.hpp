@@ -167,10 +167,23 @@ constexpr auto beta(const T1 a, const T2 b) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto binomial_coef(const T1 n, const T2 k) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::binomial_coef(n, k);
+  //  if (std::is_constant_evaluated())
+  return gcem::binomial_coef(n, k);
+  //  else
+  //    return gcem::binomial_coef(n, k);
+}
+
+/**
+ * @brief Computes the cube root of a number.
+ *
+ * @param x The number to compute the cube root of.
+ * @return constexpr auto The cube root of the input number.
+ */
+template <typename T> constexpr auto cbrt(const T x) noexcept {
+  if (std::is_constant_evaluated() && x >= 0)
+    return gcem::pow(x, 1.0 / 3.0);
   else
-    return gcem::binomial_coef(n, k);
+    return std::cbrt(x);
 }
 
 /**
@@ -247,10 +260,10 @@ template <typename T> constexpr auto erf(const T x) noexcept {
  * @return constexpr auto The inverse error function of the input number.
  */
 template <typename T> constexpr auto erf_inv(const T p) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::erf_inv(p);
-  else
-    return gcem::erf_inv(p);
+  //  if (std::is_constant_evaluated())
+  return gcem::erf_inv(p);
+  //  else
+  //    return gcem::erf_inv(p);
 }
 
 /**
@@ -279,11 +292,17 @@ template <typename T> constexpr auto expm1(const T x) noexcept {
     return std::expm1(x);
 }
 
+/**
+ * @brief Computes the factorial of a number.
+ *
+ * @param x The number to compute the factorial of.
+ * @return constexpr auto The factorial of the input number.
+ */
 template <typename T> constexpr auto factorial(const T x) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::factorial(x);
-  else
-    return gcem::factorial(x);
+  //  if (std::is_constant_evaluated())
+  return gcem::factorial(x);
+  //  else
+  //    return gcem::factorial(x);
 }
 
 /**
@@ -323,10 +342,10 @@ constexpr auto fmod(const T1 x, const T2 y) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto gcd(const T1 a, const T2 b) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::gcd(a, b);
-  else
-    return gcem::gcd(a, b);
+  //  if (std::is_constant_evaluated())
+  return gcem::gcd(a, b);
+  //  else
+  //    return gcem::gcd(a, b);
 }
 
 /**
@@ -354,10 +373,10 @@ constexpr auto hypot(const T1 x, const T2 y) noexcept {
  */
 template <typename T1, typename T2, typename T3>
 constexpr auto incomplete_beta(const T1 a, const T2 b, const T3 z) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::incomplete_beta(a, b, z);
-  else
-    return gcem::incomplete_beta(a, b, z);
+  //  if (std::is_constant_evaluated())
+  return gcem::incomplete_beta(a, b, z);
+  //  else
+  //    return gcem::incomplete_beta(a, b, z);
 }
 
 /**
@@ -372,10 +391,10 @@ constexpr auto incomplete_beta(const T1 a, const T2 b, const T3 z) noexcept {
 template <typename T1, typename T2, typename T3>
 constexpr auto incomplete_beta_inv(const T1 a, const T2 b,
                                    const T3 p) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::incomplete_beta_inv(a, b, p);
-  else
-    return gcem::incomplete_beta_inv(a, b, p);
+  //  if (std::is_constant_evaluated())
+  return gcem::incomplete_beta_inv(a, b, p);
+  //  else
+  //    return gcem::incomplete_beta_inv(a, b, p);
 }
 
 /**
@@ -387,10 +406,10 @@ constexpr auto incomplete_beta_inv(const T1 a, const T2 b,
  */
 template <typename T1, typename T2>
 constexpr auto incomplete_gamma(const T1 a, const T2 x) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::incomplete_gamma(a, x);
-  else
-    return gcem::incomplete_gamma(a, x);
+  //  if (std::is_constant_evaluated())
+  return gcem::incomplete_gamma(a, x);
+  //  else
+  //    return gcem::incomplete_gamma(a, x);
 }
 
 /**
@@ -403,10 +422,10 @@ constexpr auto incomplete_gamma(const T1 a, const T2 x) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto incomplete_gamma_inv(const T1 a, const T2 p) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::incomplete_gamma_inv(a, p);
-  else
-    return gcem::incomplete_gamma_inv(a, p);
+  //  if (std::is_constant_evaluated())
+  return gcem::incomplete_gamma_inv(a, p);
+  //  else
+  //    return gcem::incomplete_gamma_inv(a, p);
 }
 
 /**
@@ -416,10 +435,10 @@ constexpr auto incomplete_gamma_inv(const T1 a, const T2 p) noexcept {
  * @return constexpr auto The inverse square root of x.
  */
 template <typename T> constexpr auto inv_sqrt(const T x) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::inv_sqrt(x);
-  else
-    return gcem::inv_sqrt(x);
+  //  if (std::is_constant_evaluated())
+  return gcem::inv_sqrt(x);
+  //  else
+  //    return gcem::inv_sqrt(x);
 }
 
 /**
@@ -431,10 +450,10 @@ template <typename T> constexpr auto inv_sqrt(const T x) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto lbeta(const T1 a, const T2 b) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::lbeta(a, b);
-  else
-    return gcem::lbeta(a, b);
+  //  if (std::is_constant_evaluated())
+  return gcem::lbeta(a, b);
+  //  else
+  //    return gcem::lbeta(a, b);
 }
 
 /**
@@ -446,10 +465,10 @@ constexpr auto lbeta(const T1 a, const T2 b) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto lcm(const T1 a, const T2 b) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::lcm(a, b);
-  else
-    return gcem::lcm(a, b);
+  //  if (std::is_constant_evaluated())
+  return gcem::lcm(a, b);
+  //  else
+  //    return gcem::lcm(a, b);
 }
 
 /**
@@ -474,10 +493,10 @@ template <typename T> constexpr auto lgamma(const T x) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto lmgamma(const T1 a, const T2 p) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::lmgamma(a, p);
-  else
-    return gcem::lmgamma(a, p);
+  //  if (std::is_constant_evaluated())
+  return gcem::lmgamma(a, p);
+  //  else
+  //    return gcem::lmgamma(a, p);
 }
 
 /**
@@ -542,10 +561,10 @@ template <typename T> constexpr auto log10(const T x) noexcept {
  */
 template <typename T1, typename T2>
 constexpr auto log_binomial_coef(const T1 n, const T2 k) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::log_binomial_coef(n, k);
-  else
-    return gcem::log_binomial_coef(n, k);
+  //  if (std::is_constant_evaluated())
+  return gcem::log_binomial_coef(n, k);
+  //  else
+  //    return gcem::log_binomial_coef(n, k);
 }
 
 /**
@@ -586,7 +605,8 @@ constexpr auto min(const T1 x, const T2 y) noexcept {
  * @return constexpr auto The value of x^y.
  */
 template <typename T1, typename T2>
-constexpr auto pow(const T1 base, const T2 exp_term) noexcept {
+constexpr auto pow(const T1 base, const T2 exp_term) noexcept
+    -> decltype(base * exp_term) {
   if (std::is_constant_evaluated())
     return gcem::pow(base, exp_term);
   else
@@ -620,10 +640,10 @@ template <typename T> constexpr auto round(const T x) noexcept {
  * (negative).
  */
 template <typename T> constexpr auto sgn(const T x) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::sgn(x);
-  else
-    return gcem::sgn(x);
+  //  if (std::is_constant_evaluated())
+  return gcem::sgn(x);
+  //  else
+  //    return gcem::sgn(x);
 }
 
 /**
@@ -636,12 +656,12 @@ template <typename T> constexpr auto sgn(const T x) noexcept {
  * @param x The floating-point value to check.
  * @return constexpr bool True if the sign bit is set, false otherwise.
  */
-template <typename T> constexpr bool signbit(const T x) noexcept {
-  if (std::is_constant_evaluated())
-    return gcem::signbit(x);
-  else
-    return std::signbit(x);
-}
+// template <typename T> constexpr bool signbit(const T x) noexcept {
+//   if (std::is_constant_evaluated())
+//     return gcem::signbit(x);
+//   else
+//     return std::signbit(x);
+// }
 
 /**
  * @brief Computes the sine of a number.

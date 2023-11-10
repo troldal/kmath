@@ -25,6 +25,8 @@
 #ifndef _gcem_acos_HPP
 #define _gcem_acos_HPP
 
+#include "atan.hpp"
+
 namespace internal {
 
 template <typename T> constexpr T acos_compute(const T x) noexcept {

@@ -21,6 +21,8 @@
 #ifndef _gcem_lbeta_HPP
 #define _gcem_lbeta_HPP
 
+#include "lgamma.hpp"
+
 /**
  * Compile-time log-beta function
  *

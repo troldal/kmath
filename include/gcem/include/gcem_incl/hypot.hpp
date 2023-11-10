@@ -27,6 +27,8 @@
 #ifndef _gcem_hypot_HPP
 #define _gcem_hypot_HPP
 
+#include "sqrt.hpp"
+
 namespace internal {
 
 template <typename T>

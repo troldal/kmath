@@ -25,6 +25,8 @@
 #ifndef _gcem_cos_HPP
 #define _gcem_cos_HPP
 
+#include "tan.hpp"
+
 namespace internal {
 
 template <typename T> constexpr T cos_compute(const T x) noexcept {

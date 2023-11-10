@@ -21,6 +21,8 @@
 #ifndef _gcem_beta_HPP
 #define _gcem_beta_HPP
 
+#include "lbeta.hpp"
+
 /**
  * Compile-time beta function
  *

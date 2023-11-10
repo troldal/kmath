@@ -25,6 +25,8 @@
 #ifndef _gcem_pow_HPP
 #define _gcem_pow_HPP
 
+#include "pow_integral.hpp"
+
 namespace internal {
 
 template <typename T>

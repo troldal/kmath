@@ -25,6 +25,8 @@
 #ifndef _gcem_exp_HPP
 #define _gcem_exp_HPP
 
+#include "pow_integral.hpp"
+
 namespace internal {
 
 // see https://en.wikipedia.org/wiki/Euler%27s_continued_fraction_formula

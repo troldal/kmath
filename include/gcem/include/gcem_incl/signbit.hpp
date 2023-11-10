@@ -21,13 +21,16 @@
 #ifndef _gcem_signbit_HPP
 #define _gcem_signbit_HPP
 
+#ifdef _MSC_VER
+#include <float.h>
+#endif
+
 /**
  * Compile-time sign bit detection function
  *
  * @param x a real-valued input
  * @return return true if \c x is negative, otherwise return false.
  */
-
 template <typename T> constexpr bool signbit(const T x) noexcept {
 #ifdef _MSC_VER
   return ((x == T(0)) ? (_fpclass(x) == _FPCLASS_NZ) : (x < T(0)));
